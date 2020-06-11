@@ -404,24 +404,14 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"1explorer.sugarchain.org",
-                                       "1node.sugarchain.org",
-                                       // "1pool.sugarchain.org",
-                                       // "2pool.sugarchain.org",
-                                       "1seed.sugarchain.info",
-                                       "2seed.sugarchain.info",
-                                       ""};
+static const string mainnet_seeds[] = {""};
 
-static const string testnet_seeds[] = {"1explorer-testnet.cryptozeny.com",
-                                       "1node-testnet.cryptozeny.com",
-                                       // "1pool-testnet.cryptozeny.com",
-                                       "1seed-testnet.cryptozeny.com",
-                                       ""};
+static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8333), true); // FIXME.SUGAR // 8333? 34230?
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8877), true); // FIXME.SUGAR // 8333? 34230?
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
@@ -473,10 +463,10 @@ int main(int argc, char **argv) {
   bool fDNS = true;
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
-      pchMessageStart[0] = 0xb0;
-      pchMessageStart[1] = 0x11;
-      pchMessageStart[2] = 0x90;
-      pchMessageStart[3] = 0x70;
+      pchMessageStart[0] = 0x0c;
+      pchMessageStart[1] = 0x12;
+      pchMessageStart[2] = 0x08;
+      pchMessageStart[3] = 0x07;
       seeds = testnet_seeds;
       fTestNet = true;
   }
