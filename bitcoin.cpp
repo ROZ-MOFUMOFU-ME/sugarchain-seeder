@@ -299,7 +299,7 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
 
 /*
 int main(void) {
-  CService ip("mofumofu.me", 8877, true);
+  CService ip("seed.mofumofu.me", 8877, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
