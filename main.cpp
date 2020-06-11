@@ -404,15 +404,15 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {""};
+static const string mainnet_seeds[] = {};
 
-static const string testnet_seeds[] = {""};
+static const string testnet_seeds[] = {};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8877), true); // FIXME.SUGAR // 8333? 34230?
-  }
+  //if (!fTestNet){
+  //  db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8877), true);
+  //}
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
