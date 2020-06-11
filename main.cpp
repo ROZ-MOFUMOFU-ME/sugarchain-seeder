@@ -410,9 +410,9 @@ static const string testnet_seeds[] = {"ko-to.org", "testnet.ko-to.org", "kotoco
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8433), true); // FIXME.SUGAR // 8333? 34230?
-  }
+//  if (!fTestNet){
+//  db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8433), true); // FIXME.SUGAR // 8333? 34230?
+//  }
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
