@@ -404,7 +404,17 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {""};
+static const string mainnet_seeds[] = {
+    "kumaseed.tamami-foundation.org",
+    "kumacoin.seed.lapool.me",
+    "108.61.183.37",
+    "123.217.155.249",
+    "79.137.57.54",
+    "45.77.179.32",
+    "203.152.216.75",
+    "203.152.216.76",
+    "203.152.216.77", 
+    ""};
 
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
