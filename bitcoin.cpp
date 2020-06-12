@@ -80,7 +80,7 @@ class CNode {
     CAddress me(CService("0.0.0.0"));
     BeginMessage("version");
     int nBestHeight = GetRequireHeight();
-    string ver = "/sugarchain-seeder:0.1.1.6(homura)/";
+    string ver = "/kumacoin-seeder:0.01/";
     uint8_t fRelayTxs = 0;
     vSend << PROTOCOL_VERSION << nLocalServices << nTime << you << me << nLocalNonce << ver << nBestHeight << fRelayTxs;
     EndMessage();
@@ -299,7 +299,7 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
 
 /*
 int main(void) {
-  CService ip("sugarchain.org", 34230, true);
+  CService ip("seed.mofumofu.me", 7586, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
