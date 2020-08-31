@@ -407,6 +407,9 @@ extern "C" void* ThreadStats(void*) {
 static const string mainnet_seeds[] = {
     "kumaseed.tamami-foundation.org",
     "kumacoin.seed.lapool.me",
+    "199.241.138.219",
+    "27.135.182.107",
+    "219.119.136.116",
     "108.61.183.37",
     "123.217.155.249",
     "79.137.57.54",
